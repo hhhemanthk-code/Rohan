@@ -11,25 +11,18 @@ const navItems = [
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [progress, setProgress] = useState(0);
   const location = useLocation();
 
   useEffect(() => {
-    let lastY = 0;
     const onScroll = () => {
       const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setScrolled(y > 60);
       setProgress(max > 0 ? y / max : 0);
-      if (y > 300) {
-        setHidden(y - lastY > 4);
-      } else {
-        setHidden(false);
-      }
-      lastY = y;
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -47,7 +40,7 @@ export function Navbar() {
     <>
       <motion.header
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: hidden ? -120 : 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className={`site-header-shell fixed left-1/2 top-5 z-50 grid w-[min(92vw,1320px)] -translate-x-1/2 grid-cols-[1fr_auto_1fr] items-center gap-5 rounded-full px-6 py-3 transition-all duration-500 max-md:grid-cols-[auto_1fr] max-md:px-4 ${
           scrolled

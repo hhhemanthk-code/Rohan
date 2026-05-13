@@ -15,7 +15,6 @@ import { Navbar } from "../components/Navbar";
 import { Team } from "../components/Team";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
-import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { FloatingOrbs } from "../components/ui/FloatingOrbs";
 import { GlowLine } from "../components/ui/GlowLine";
 import { TiltCard } from "../components/ui/TiltCard";
@@ -229,7 +228,6 @@ function StoryParagraph({ children, isHighlight, isBold }) {
 export function AboutPage() {
   return (
     <div className="site-shell">
-      <ScrollProgress />
       <Navbar />
       <main>
         <section className="relative z-10 pt-32 pb-16 lg:pt-40 lg:pb-24">

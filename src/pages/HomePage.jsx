@@ -8,13 +8,11 @@ import { LogoStrip } from "../components/LogoStrip";
 import { Blog } from "../components/Blog";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
-import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { HorizontalMarquee } from "../components/ui/HorizontalMarquee";
 
 export function HomePage() {
   return (
     <div className="site-shell">
-      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />

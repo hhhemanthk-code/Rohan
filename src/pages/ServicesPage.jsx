@@ -8,7 +8,6 @@ import { Blog } from "../components/Blog";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { SmoothReveal } from "../components/ui/SmoothReveal";
-import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { FloatingOrbs } from "../components/ui/FloatingOrbs";
 import { OrbitRing } from "../components/ui/OrbitRing";
 import { TiltCard } from "../components/ui/TiltCard";
@@ -232,7 +231,6 @@ function ServiceRow({ service, index }) {
 export function ServicesPage() {
   return (
     <div className="site-shell">
-      <ScrollProgress />
       <Navbar />
       <main>
         <HeroBanner />

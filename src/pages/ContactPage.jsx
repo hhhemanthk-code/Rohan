@@ -15,7 +15,6 @@ import {
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { FloatingOrbs } from "../components/ui/FloatingOrbs";
 import { GlowLine } from "../components/ui/GlowLine";
 import { TiltCard } from "../components/ui/TiltCard";
@@ -315,7 +314,6 @@ export function ContactPage() {
 
   return (
     <div className="site-shell">
-      <ScrollProgress />
       <Navbar />
       <main>
         <section

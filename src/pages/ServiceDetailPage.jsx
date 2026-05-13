@@ -21,7 +21,6 @@ import { Navbar } from "../components/Navbar";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { SmoothReveal } from "../components/ui/SmoothReveal";
-import { ScrollProgress } from "../components/ui/ScrollProgress";
 import { FloatingOrbs } from "../components/ui/FloatingOrbs";
 import { OrbitRing } from "../components/ui/OrbitRing";
 import { TiltCard } from "../components/ui/TiltCard";
@@ -971,7 +970,6 @@ export function ServiceDetailPage() {
 
   return (
     <div className="site-shell">
-      <ScrollProgress />
       <Navbar />
       <main>
         <HeroSection data={data} slug={slug} />

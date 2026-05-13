@@ -13,7 +13,6 @@ import {
   Calendar,
 } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { FloatingOrbs } from "../components/ui/FloatingOrbs";
 import { GlowLine } from "../components/ui/GlowLine";
@@ -314,7 +313,6 @@ export function ContactPage() {
 
   return (
     <div className="site-shell">
-      <Navbar />
       <main>
         <section
           ref={heroRef}

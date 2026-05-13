@@ -1,14 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const LOAD_DURATION = 2400;
-const REVEAL_DELAY = 200;
-const SPLIT_DURATION = 1000;
+const LOAD_DURATION = 900;
+const REVEAL_DELAY = 90;
+const SPLIT_DURATION = 620;
 
 export function Preloader() {
   const [count, setCount] = useState(0);
   const [phase, setPhase] = useState("counting");
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(
+    () => window.sessionStorage.getItem("rohan-preloader-seen") !== "true"
+  );
 
   const tick = useCallback(() => {
     setCount((prev) => {
@@ -20,6 +22,11 @@ export function Preloader() {
   }, []);
 
   useEffect(() => {
+    if (!visible) {
+      return;
+    }
+
+    window.sessionStorage.setItem("rohan-preloader-seen", "true");
     document.body.style.overflow = "hidden";
 
     const interval = setInterval(tick, LOAD_DURATION / 60);
@@ -49,7 +56,7 @@ export function Preloader() {
       clearTimeout(hideTimer);
       document.body.style.overflow = "";
     };
-  }, [tick]);
+  }, [tick, visible]);
 
   if (!visible) return null;
 

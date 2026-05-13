@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { Navbar } from "../components/Navbar";
 import { LogoStrip } from "../components/LogoStrip";
 import { Blog } from "../components/Blog";
 import { CTA } from "../components/CTA";
@@ -231,7 +230,6 @@ function ServiceRow({ service, index }) {
 export function ServicesPage() {
   return (
     <div className="site-shell">
-      <Navbar />
       <main>
         <HeroBanner />
 

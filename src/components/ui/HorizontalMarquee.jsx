@@ -22,7 +22,7 @@ export function HorizontalMarquee({
   return (
     <div
       ref={ref}
-      className={`overflow-hidden whitespace-nowrap py-8 ${className}`}
+      className={`relative overflow-hidden whitespace-nowrap py-8 ${className}`}
     >
       <motion.div style={{ x }} className="inline-flex gap-8">
         {Array.from({ length: 4 }).map((_, i) => (

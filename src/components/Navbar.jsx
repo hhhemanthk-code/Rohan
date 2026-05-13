@@ -27,10 +27,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   const isActive = (href) => {
     if (href === "/") return location.pathname === "/";
     return location.pathname.startsWith(href);

@@ -17,7 +17,6 @@ import {
   Globe,
   TrendingUp,
 } from "lucide-react";
-import { Navbar } from "../components/Navbar";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { SmoothReveal } from "../components/ui/SmoothReveal";
@@ -970,7 +969,6 @@ export function ServiceDetailPage() {
 
   return (
     <div className="site-shell">
-      <Navbar />
       <main>
         <HeroSection data={data} slug={slug} />
         <BadgeRibbon slug={slug} />

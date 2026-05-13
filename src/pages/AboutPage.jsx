@@ -11,7 +11,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { Navbar } from "../components/Navbar";
 import { Team } from "../components/Team";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
@@ -228,7 +227,6 @@ function StoryParagraph({ children, isHighlight, isBold }) {
 export function AboutPage() {
   return (
     <div className="site-shell">
-      <Navbar />
       <main>
         <section className="relative z-10 pt-32 pb-16 lg:pt-40 lg:pb-24">
           <FloatingOrbs count={4} className="-z-10 opacity-40" />

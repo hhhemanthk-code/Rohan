@@ -1,4 +1,3 @@
-import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Services } from "../components/Services";
@@ -13,7 +12,6 @@ import { HorizontalMarquee } from "../components/ui/HorizontalMarquee";
 export function HomePage() {
   return (
     <div className="site-shell">
-      <Navbar />
       <main>
         <Hero />
         <HorizontalMarquee

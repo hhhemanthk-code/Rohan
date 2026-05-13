@@ -123,7 +123,7 @@ export function WhyUs() {
             </div>
           </SmoothReveal>
 
-          <div ref={imgRef}>
+          <div ref={imgRef} className="relative">
             <SmoothReveal direction="right">
               <div className="relative aspect-square">
                 <motion.div
